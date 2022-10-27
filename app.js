@@ -3,6 +3,9 @@ const express = require('express');
 const PORT = 4000
 
 const app = express();
+var cors = require('cors');
+
+app.use(cors({credentials:true, origin:true}));
 
 app.get('/', (req,res) => {
     res.send({
