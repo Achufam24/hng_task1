@@ -24,6 +24,7 @@ app.post('/', (req,res) => {
     var operation_type = String(req.body.operation_type)
     var x = Number(req.body.x);
     var y = Number(req.body.y);
+
   
     if (operation_type === "addition") {
       var result = x + y;
@@ -40,7 +41,7 @@ app.post('/', (req,res) => {
     
       
   
-      res.send({
+     res.status(201).send({
           "slackUsername": "Achufam24",
           "operation_type": operation_type,
           "result":result
