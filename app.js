@@ -41,7 +41,7 @@ app.post('/', (req,res) => {
     
       
   
-     res.status(201).send({
+     res.send({
           "slackUsername": "Achufam24",
           "operation_type": operation_type,
           "result":result
